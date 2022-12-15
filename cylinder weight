@@ -1,0 +1,39 @@
+import math
+pi = math.pi
+x = 10
+
+def rad():
+    x = float(input("Введите диаметр в см: "))
+    r = x/2
+    return r
+
+def height():
+    h = float(input("Введите высоту цилиндра в см: "))
+    return h
+
+def volume():
+    r = rad()
+    h = height()
+    sqrt = pi * r ** 2
+    vol = sqrt * h
+    return vol
+
+#print("Объём цилиндра равен", volume(), "см3")
+
+
+def ves():
+    x = input("Введите удельный вес г/см3: ")
+    if "," in x:
+        y = x.replace(",", ".")
+    else: y = x
+    return float(y)
+
+
+
+
+def massa(g):
+    n = ves()
+    return g*n/1000
+
+while x==10:
+    print("Объем цилиндра: ", volume(), "Вес цилиндра в кг: ", massa(volume()))
