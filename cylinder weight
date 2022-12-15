@@ -1,6 +1,5 @@
 import math
 pi = math.pi
-x = 10
 
 def rad():
     x = float(input("Введите диаметр в см: "))
@@ -20,7 +19,6 @@ def volume():
 
 #print("Объём цилиндра равен", volume(), "см3")
 
-
 def ves():
     x = input("Введите удельный вес г/см3: ")
     if "," in x:
@@ -28,12 +26,9 @@ def ves():
     else: y = x
     return float(y)
 
-
-
-
 def massa(g):
     n = ves()
     return g*n/1000
 
-while x==10:
+while True:
     print("Объем цилиндра: ", volume(), "Вес цилиндра в кг: ", massa(volume()))
